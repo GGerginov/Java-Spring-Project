@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <th:block th:include="~{fragments/head}"/>
+</head>
+<body>
+
+<header>
+    <th:block th:include="~{fragments/guest-navbar}"/>
+</header>
+
+<main>
+    <section class="block">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-20">
+                    <div class="login-sec">
+                        <div class="row">
+                            <div class="col-md-60">
+                                <div class="account-user">
+                                    <div class="logo">
+                                        <a href="#" title="">
+                                            <i class="fa fa-get-pocket"></i>
+                                            <span>МобилеТУ</span>
+                                            <strong>RENT vehiculs</strong>
+                                        </a>
+                                    </div><!-- LOGO -->
+                                    <form th:method="post" th:action="@{/users/login}">
+                                        <h1>Login Form</h1>
+                                        <div class="field">
+                                            <input type="text" placeholder="Потребитлексо име" name="username"/>
+                                        </div>
+                                        <div class="field">
+                                            <input type="password" placeholder="Парола" name="password"/>
+                                        </div>
+<!--                                        <div class="field">-->
+<!--                                            <input type="submit" value="SEND NOW" class="flat-btn"/>-->
+<!--                                        </div>-->
+                                        <div class="field">
+                                            <button type="submit" class="flat-btn"><strong>Вход</strong></button>
+                                        </div>
+                                    </form>
+                                    <i>OR</i>
+                                </div>
+                                <strong>Нямаш профил в МобилеТУ?</strong>
+                                <a th:href="@{/users/register}" title=""><strong>Регистрирай се!</strong></a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<th:block th:include="~{fragments/script}"/>
+</body>
+
+
+</html>

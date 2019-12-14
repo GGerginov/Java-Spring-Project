@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <th:block th:include="~{fragments/head}"/>
+</head>
+<body>
+
+<header>
+    <th:block th:include="~{fragments/guest-navbar}"/>
+</header>
+
+<!-- /.preloader -->
+
+
+<div class="theme-layout">
+
+
+    <section class="block">
+        <div class="container agnet-prop">
+            <div class="row">
+                <div class="col-md-16 column">
+                    <div class="heading4">
+                        <h2>Редактирай тази обява</h2>
+                    </div>
+
+                    <div class="submit-content">
+                        <form id="new_post" name="new_post" method="post" class="vehicul-form" role="form">
+                            <div class="control-group">
+                                <div class="group-title">Редактирайте тази обява</div>
+                                <div class="group-container row">
+
+                                    <div class="col-md-8">
+                                        <div class="form-group s-prop-title">
+                                            <label for="title">Заглавие&nbsp;&#42;</label>
+                                            <input type="text" id="title" class="form-control" th:value="${motorcycleServiceModel.getTitle()}" name="title"
+                                                   required="">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="form-group s-prop-area">
+                                            <label for="area">Цена </label>
+                                            <input type="text" id="area" class="form-control" th:value="${motorcycleServiceModel.getPrice()}" name="price">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <div class="form-group s-prop-desc">
+                                            <label for="textarea">Описение&nbsp;&#42;</label>
+                                            <textarea id="textarea" name="description" rows="10" required=""
+                                                      style="width: 100%;" th:text="${motorcycleServiceModel.getDescription()}"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div class="col-md-4">
+                                            <div class="form-group vehicul_field_Mileage">
+                                                <label for="manufacturer">Марка</label>
+                                                <input type="text" id="manufacturer" name="manufacturer"
+                                                       class="form-control" th:value="${motorcycleServiceModel.getManufacturer()}">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <div class="form-group vehicul_field_Mileage">
+                                                <label for="location">Населено място</label>
+                                                <input type="text" id="location" name="location"
+                                                       class="form-control" th:value="${motorcycleServiceModel.getLocation()}">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <div class="form-group vehicul_field_Mileage">
+                                                <label for="model">Модел</label>
+                                                <input type="text" id="model" name="model"
+                                                       class="form-control" th:value="${motorcycleServiceModel.getModel()}">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <div class="form-group s-prop-type">
+                                                <label>Състояние </label>
+                                                <div class="dropdown label-select">
+                                                    <select class="form-control" name="status" th:default="${motorcycleServiceModel.getStatus().toString().toUpperCase()}">
+                                                        <option></option>
+                                                        <option value="NEW">Нов</option>
+                                                        <option value="USED">Употребяван</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group s-prop-type">
+                                                <label>Гориво</label>
+                                                <div class="dropdown label-select">
+                                                    <select class="form-control" name="fuel" th:selected="${motorcycleServiceModel.getFuel()}">
+                                                        <option></option>
+                                                        <option value="DIESEL">Дизел</option>
+                                                        <option value="LPG">LPG</option>
+                                                        <option value="GASOLINE">Бензин</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group vehicul_field_years">
+                                                <label for="car_years">Година </label>
+                                                <input type="text" id="car_years" name="year"
+                                                       class="form-control" th:value="${motorcycleServiceModel.getYear()}">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group vehicul_field_Mileage">
+                                                <label for="car_years">Пробег</label>
+                                                <input type="text" id="car_Mileage" name="mileage"
+                                                       class="form-control" th:value="${motorcycleServiceModel.getMillage()}">
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="submit row" style="clear: both; margin-top: 25px;">
+                                <div class="col-md-12">
+                                    <input type="submit" class="btn btn-lg flat-btn" id="vehicul_submit"
+                                           value="Редактирай">
+                                    <label style="margin-top: 15px; margin-left: 10px;"></label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</div>
+
+<!-- Script -->
+
+<!--<th:block th:include="~{fragments/script}"/>-->
+</body>
+</html>

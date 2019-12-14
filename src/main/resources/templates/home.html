@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <th:block th:include="~{fragments/head}"/>
+</head>
+<body>
+
+<header>
+    <th:block th:include="~{fragments/guest-navbar2}"/>
+</header>
+
+<main>
+
+
+    <div class="registration-sec">
+
+        <form>
+            <div class="field">
+                <input type="text" placeholder="Марка"/>
+            </div>
+            <div class="field">
+                <input type="text" placeholder="Модел"/>
+            </div>
+
+
+            <input type="submit" value="Search" class="flat-btn"/>
+        </form>
+    </div>
+
+</main>
+
+</body>
+
+</html>
