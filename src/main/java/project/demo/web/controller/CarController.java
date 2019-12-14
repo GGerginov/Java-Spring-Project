@@ -15,6 +15,7 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/cars")
+
 public class CarController extends BaseController {
 
     private ModelMapper modelMapper;
@@ -111,6 +112,7 @@ public class CarController extends BaseController {
     }
 
     @PostMapping("/delete/{id}")
+
     public ModelAndView deleteConfirm(@PathVariable String id){
 
 

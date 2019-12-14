@@ -15,4 +15,10 @@ public class HomeController extends BaseController {
 
         return super.view("home");
     }
+
+    @GetMapping("/contacts")
+    public ModelAndView contacts(){
+
+        return super.view("contacts");
+    }
 }

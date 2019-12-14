@@ -42,7 +42,7 @@
                                     <div class="col-md-4">
                                         <div class="form-group s-prop-area">
                                             <label for="area">Цена </label>
-                                            <input type="text" id="area" class="form-control" value="" name="price">
+                                            <input type="text" id="area" class="form-control" value="" name="price" required="">
                                         </div>
                                     </div>
 
@@ -60,7 +60,7 @@
                                             <div class="form-group vehicul_field_Mileage">
                                                 <label for="manufacturer">Марка</label>
                                                 <input type="text" id="manufacturer" name="manufacturer"
-                                                       class="form-control" value="">
+                                                       class="form-control" value="" required="">
                                             </div>
                                         </div>
 
@@ -76,7 +76,7 @@
                                             <div class="form-group vehicul_field_Mileage">
                                                 <label for="model">Модел </label>
                                                 <input type="text" id="model" name="model"
-                                                       class="form-control" value="">
+                                                       class="form-control" value="" required="">
                                             </div>
                                         </div>
 
@@ -96,7 +96,7 @@
                                             <div class="form-group s-prop-type">
                                                 <label>Гориво </label>
                                                 <div class="dropdown label-select">
-                                                    <select class="form-control" name="fuel">
+                                                    <select class="form-control" name="fuel" required="">
                                                         <option></option>
                                                         <option value="DIESEL">Дизел</option>
                                                         <option value="LPG">LPG</option>
@@ -109,7 +109,7 @@
                                             <div class="form-group vehicul_field_years">
                                                 <label for="car_years">Година </label>
                                                 <input type="text" id="car_years" name="year"
-                                                       class="form-control" value="">
+                                                       class="form-control" value="" required="">
                                             </div>
                                         </div>
                                         <div class="col-md-4">
@@ -120,12 +120,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="col-md-4">
-                                            <div class="form-group vehicul_field_Mileage">
-                                                <h4>Upload Multiple Files:</h4>
-                                                <input type="file" name="image"/> <br/><br/>
-                                            </div>
-                                        </div>
+
 
                                     </div>
                                 </div>
@@ -152,5 +147,7 @@
 <!-- Script -->
 
 <!--<th:block th:include="~{fragments/script}"/>-->
+<th:block th:include="~{fragments/footer}"/>
+
 </body>
 </html>

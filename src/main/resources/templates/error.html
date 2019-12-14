@@ -116,67 +116,61 @@
 
 <th:block th:include="~{fragments/guest-navbar}"/>
 
-<main>
+<div class="theme-layout">
 
-    <div class="registration-sec">
-        <form th:method="post" th:action="@{/cars/search}">
-            <div class="field">
-                <label for="manufacturer" class="text-black mb-1"><strong>Марка</strong></label>
-                <input type="text" class="form-control" id="manufacturer" name="manufacturer">
-            </div>
-            <div class="field">
-                <label for="model" class="text-black mb-1"><strong>Модел</strong></label>
-                <input type="text" class="form-control" id="model" name="model">
-            </div>
-
-            <div class="button-holder mt-3 d-flex justify-content-center">
-                <button type="submit" class="flat-btn center-block"><strong>Търсене</strong></button>
-            </div>
-        </form>
-    </div><!-- Registration sec -->
-
-    <h1 class="my-4">МобилеТУ<br>
-        <small><i>Автомобили</i></small>
-    </h1>
-    <th:block th:each="car :${carServiceModelList}">
-        <div class="container panel ">
-            <br>
-            <br>
-            <div class="row" id="ads">
-                <!-- Category Card -->
-                <div class="col-md-4">
-                    <div class="card rounded">
-                        <div class="card-image fa-border">
-                            <span class="card-notify-year" th:text="${car.getYear()}"></span>
-                            <img class="img-fluid border "
-                                 th:src="@{${'/img/cars/' + car.getManufacturer().trim().toLowerCase() + '.png'}}"
-                                 width="350"
-                                 height="350"
-                                 alt="Alternate Text"/>
-                        </div>
-                        <div class="card-image-overlay m-auto">
-                            <span class="card-detail-badge" th:text="${car.getStatus().toString()}"></span>
-                            <span class="card-detail-badge" th:text="${car.getPrice()}"></span>
-                            <span class="card-detail-badge" th:text="${car.getMillage()}"></span>
-                        </div>
-                        <div class="blog-post vehicul-post">
-                            <div class="card-body text-center">
-                                <div class="ad-title m-auto">
-                                    <h5 th:text="${car.getTitle()}"></h5>
+    <section class="block">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="error-sec">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="error-not-found style2">
+<!--                                    <span>Sorry the Page you are looking fot does not exist here</span>-->
+                                    <span><strong>За съжаление страницата която достъпихте не съществуа !</strong></span>
+                                    <h3>404<strong>ERROR!</strong></h3>
+                                    <h4>Можете да се върнете обратно в нашият сайт<br/>с навигацията отдолу</h4>
+                                    <ul>
+                                        <li><a th:href="@{/}" title="">Начало</a></li>
+                                        <li><a th:href="@{/}" title="">За нас</a></li>
+                                        <li><a th:href="@{/}" title="">Контакти</a></li>
+                                    </ul>
                                 </div>
-                                <a class="ad-btn" th:href="@{/cars/show/{id}(id=${car.getId()})}">Към обявата</a>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
-    </th:block>
+    </section>
 
-</main>
 
-<th:block th:include="~{fragments/footer}"/>
+    <th:block th:include="~{fragments/footer}"/>
+</div>
+
+<!-- Script -->
+<script type="text/javascript" src="js/modernizr.js"></script><!-- Modernizer -->
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script><!-- Jquery -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script><!-- Bootstrap -->
+<script type="text/javascript" src="js/owl.carousel.min.js"></script><!-- Owl Carousal -->
+<script type="text/javascript" src="js/html5lightbox.js"></script><!-- HTML -->
+<script type="text/javascript" src="js/scrolly.js"></script><!-- Parallax -->
+<script type="text/javascript" src="js/price-range.js"></script><!-- Parallax -->
+<script type="text/javascript" src="js/script.js"></script><!-- Script -->
+<script type="text/javascript" src="js/jquery.poptrox.min.js"></script><!-- Popup -->
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        "use strict";
+
+        $(function () {
+            var foo = $('.gallery-box');
+            foo.poptrox({
+                usePopupCaption: true
+            });
+        });
+    });
+</script>
+
 </body>
-
 </html>

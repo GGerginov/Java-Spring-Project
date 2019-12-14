@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <th:block th:include="~{fragments/head}"/>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+        @import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+
+        }
+
+        /* Category Ads */
+
+        #ads {
+            margin: 30px 0 30px 0;
+
+        }
+
+        #ads .card-notify-badge {
+            position: absolute;
+            left: -10px;
+            top: -20px;
+            background: #f2d900;
+            text-align: center;
+            border-radius: 30px 30px 30px 30px;
+            color: #000;
+            padding: 5px 10px;
+            font-size: 14px;
+
+        }
+
+        #ads .card-notify-year {
+            position: absolute;
+            right: -10px;
+            top: -20px;
+            background: #ff4444;
+            border-radius: 50%;
+            text-align: center;
+            color: #fff;
+            font-size: 14px;
+            width: 50px;
+            height: 50px;
+            padding: 15px 0 0 0;
+        }
+
+
+        #ads .card-detail-badge {
+            background: #f2d900;
+            text-align: center;
+            border-radius: 30px 30px 30px 30px;
+            color: #000;
+            padding: 5px 10px;
+            font-size: 14px;
+        }
+
+
+        #ads .card:hover {
+            background: #fff;
+            box-shadow: 12px 15px 20px 0px rgba(46, 61, 73, 0.15);
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        #ads .card-image-overlay {
+            font-size: 20px;
+
+        }
+
+
+        #ads .card-image-overlay span {
+            display: inline-block;
+        }
+
+
+        #ads .ad-btn {
+            text-transform: uppercase;
+            width: 150px;
+            height: 40px;
+            border-radius: 80px;
+            font-size: 16px;
+            line-height: 35px;
+            text-align: center;
+            border: 3px solid #e6de08;
+            display: block;
+            text-decoration: none;
+            margin: 20px auto 1px auto;
+            color: #000;
+            overflow: hidden;
+            position: relative;
+            background-color: #e6de08;
+        }
+
+        #ads .ad-btn:hover {
+            background-color: #e6de08;
+            color: #1e1717;
+            border: 2px solid #e6de08;
+            background: transparent;
+            transition: all 0.3s ease;
+            box-shadow: 12px 15px 20px 0px rgba(46, 61, 73, 0.15);
+        }
+
+        #ads .ad-title h5 {
+            text-transform: uppercase;
+            font-size: 18px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<th:block th:include="~{fragments/guest-navbar}"/>
+
+    <section class="block">
+        <div class="container">
+            <h1 class="nocontent outline">--- email+phone ---</h1>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="contact-lists-sec">
+                        <ul>
+                            <li>
+                                <i class="fa fa-phone"></i>0889567680
+                            </li>
+                            <li>
+                                <i class="fa fa-at"></i>mobiletu@email.com
+                            </li>
+                            <li>
+                                <i class="fa fa-support"></i>На линия 24/7 !
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="block remove-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="heading4">
+                        <h2>Свържи се с нас</h2>
+                        <span>МобулеТУ</span>
+                    </div>
+                    <div class="contact-page-sec">
+                        <div class="row">
+                            <div class="col-md-6 column">
+                                <div class="contact-form">
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <i class="fa fa-user"></i>
+                                                <input type="text" placeholder="Име">
+                                            </div>
+                                            <div class="col-md-12">
+                                                <i class="fa fa-at"></i>
+                                                <input type="text" placeholder="Имейл">
+                                            </div>
+                                            <div class="col-md-12">
+                                                <i class="fa fa-pencil"></i>
+                                                <textarea placeholder="Съобщение"></textarea>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <button class="flat-btn" type="submit">Изпрати</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-md-6 column">
+                                <div class="contact-details">
+                                    <div class="contact-infos">
+                                        <ul>
+                                            <li>
+                                                <span><i class="fa fa-phone"></i> Адрес</span>
+                                                <p>Самоков,Център <br>ул.Македония </p>
+                                            </li>
+                                            <li>
+                                                <span><i class="fa fa-fax"></i>Имейл</span>
+                                                <p>mobiletu@email.com</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="mapouter"><div class="gmap_canvas"><iframe width="600" height="250" id="gmap_canvas" src="https://maps.google.com/maps?q=Samokov&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>Google Maps Generator by <a href="https://www.embedgooglemap.net">embedgooglemap.net</a></div><style>.mapouter{position:relative;text-align:right;height:250px;width:600px;}.gmap_canvas {overflow:hidden;background:none!important;height:250px;width:600px;}</style></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<th:block th:include="~{fragments/footer}"/>
+
+
+
+<!-- Script -->
+<script type="text/javascript" src="js/modernizr.js"></script><!-- Modernizer -->
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script><!-- Jquery -->
+<script type="text/javascript" src="js/script.js"></script><!-- Script -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script><!-- Bootstrap -->
+<script type="text/javascript" src="js/owl.carousel.min.js"></script><!-- Owl Carousal -->
+<script type="text/javascript" src="js/html5lightbox.js"></script><!-- HTML -->
+<script type="text/javascript" src="js/price-range.js"></script><!-- Parallax -->
+<script type="text/javascript" src="js/scrolly.js"></script><!-- Parallax -->
+<script type="text/javascript" src="js/jquery.poptrox.min.js"></script><!-- Popup -->
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        "use strict";
+
+        $(function () {
+            var foo = $('.gallery-box');
+            foo.poptrox({
+                usePopupCaption: true
+            });
+        });
+    });
+</script>
+
+</body>
+</html>

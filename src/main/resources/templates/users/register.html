@@ -15,21 +15,21 @@
     <div class="registration-sec">
         <form th:method="post" th:action="@{/users/register}">
             <div class="field">
-                <label for="username" class="text-black mb-1"><strong>Потребителско име</strong></label>
-                <input type="text" class="form-control" id="username" name="username">
+                <label for="username" class="text-black mb-1"><strong>Потребителско име&#42;</strong></label>
+                <input type="text" class="form-control" id="username" name="username" required>
             </div>
             <div class="field">
-                <label for="password" class="text-black mb-1"><strong>Парола</strong></label>
-                <input type="password" class="form-control" id="password"  name="password">
+                <label for="password" class="text-black mb-1"><strong>Парола&#42; (Паролата трябва да съдържа символите: (A-z), (1-9)</strong></label>
+                <input type="password" class="form-control" id="password"  name="password" required minlength="6" pattern=^[a-zA-Z0-9]*$>
             </div>
             <div class="field">
                 <label for="confirmPassword" class="text-black mb-1"><strong>Повтори паролата</strong></label>
                 <input type="password" class="form-control" id="confirmPassword"
-                       name="confirmPassword">
+                       name="confirmPassword" required minlength="6" pattern=^[a-zA-Z0-9]*$>
             </div>
             <div class="field">
-                <label for="email" class="text-black mb-1"><strong>Е-поща</strong></label>
-                <input type="email" class="form-control" id="email"  name="email">
+                <label for="email" class="text-black mb-1"><strong>Е-поща&#42;</strong></label>
+                <input type="email" class="form-control" id="email"  name="email" required>
             </div>
             <div class="button-holder mt-3 d-flex justify-content-center">
                 <button type="submit" class="flat-btn center-block"><strong>Регистрация</strong></button>
@@ -39,6 +39,8 @@
 
 </main>
 
+
 </body>
+
 
 </html>

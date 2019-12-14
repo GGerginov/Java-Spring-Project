@@ -82,7 +82,7 @@ public class Car extends BaseEntity{
         this.year = year;
     }
     @Enumerated(EnumType.STRING)
-    @Column(name = "status",nullable = false)
+    @Column(name = "status")
     public Status getStatus() {
         return status;
     }
