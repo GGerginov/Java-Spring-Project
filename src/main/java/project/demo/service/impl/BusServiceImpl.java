@@ -44,4 +44,9 @@ public class BusServiceImpl implements BusService {
     public void delete(BusServiceModel busServiceModel) {
         this.busRepository.delete(this.modelMapper.map(busServiceModel,Bus.class));
     }
+
+    @Override
+    public List<BusServiceModel> getAllBy() {
+        return this.busRepository.getAll().stream().map(bus -> this.modelMapper.map(bus,BusServiceModel.class)).collect(Collectors.toList());
+    }
 }

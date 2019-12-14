@@ -45,4 +45,9 @@ public class MotorcycleServiceImpl implements MotorcycleService {
     public void delete(MotorcycleServiceModel carServiceModel) {
 
     }
+
+    @Override
+    public List<MotorcycleServiceModel> getAllBy() {
+        return this.motorcycleRepository.getAllBy().stream().map(motorcycle -> this.modelMapper.map(motorcycle,MotorcycleServiceModel.class)).collect(Collectors.toList());
+    }
 }

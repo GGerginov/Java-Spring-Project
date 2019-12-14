@@ -5,6 +5,7 @@ import project.demo.service.models.CarServiceModel;
 
 import java.util.List;
 
+
 public interface BusService {
 
     void publish(BusServiceModel busServiceModel);
@@ -14,4 +15,6 @@ public interface BusService {
     BusServiceModel getById(String id);
 
     void delete(BusServiceModel busServiceModel);
+
+    List<BusServiceModel> getAllBy();
 }

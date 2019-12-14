@@ -16,4 +16,7 @@ public interface MotorcycleRepository extends JpaRepository<Motorcycle,String> {
 
     @Override
     void delete(Motorcycle motorcycle);
+
+    List<Motorcycle> getAllBy();
+
 }
