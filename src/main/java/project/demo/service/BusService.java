@@ -16,5 +16,5 @@ public interface BusService {
 
     void delete(BusServiceModel busServiceModel);
 
-    List<BusServiceModel> getAllBy();
+
 }

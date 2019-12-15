@@ -20,6 +20,6 @@ public interface TruckRepository extends JpaRepository<Truck,String> {
     @Override
     void delete(Truck truck);
 
-    List<Truck> getAllBy();
+
 
 }

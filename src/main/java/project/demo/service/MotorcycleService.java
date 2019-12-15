@@ -16,5 +16,5 @@ public interface MotorcycleService {
 
     void delete(MotorcycleServiceModel carServiceModel);
 
-    List<MotorcycleServiceModel> getAllBy();
+
 }

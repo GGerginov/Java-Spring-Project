@@ -17,5 +17,4 @@ public interface TruckService {
 
     void delete(TruckServiceModel truck);
 
-    List<TruckServiceModel> getAllBy();
 }

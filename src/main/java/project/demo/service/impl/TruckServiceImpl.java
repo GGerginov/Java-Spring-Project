@@ -48,8 +48,5 @@ public class TruckServiceImpl implements TruckService {
         this.truckRepository.delete(this.modelMapper.map(truck,Truck.class));
     }
 
-    @Override
-    public List<TruckServiceModel> getAllBy() {
-        return truckRepository.getAllBy().stream().map(truck -> this.modelMapper.map(truck,TruckServiceModel.class)).collect(Collectors.toList());
-    }
+
 }

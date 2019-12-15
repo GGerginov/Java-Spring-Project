@@ -17,8 +17,5 @@ public interface BusRepository extends JpaRepository<Bus,String> {
     @Override
     void delete(Bus bus);
 
-    List<Bus> getAll();
 
-    @Override
-    <S extends Bus> S saveAndFlush(S s);
 }
