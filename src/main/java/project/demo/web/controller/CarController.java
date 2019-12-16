@@ -1,16 +1,19 @@
 package project.demo.web.controller;
 
+import com.cloudinary.Cloudinary;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import project.demo.service.CarService;
+import project.demo.service.CloudinaryService;
 import project.demo.service.models.CarServiceModel;
 import project.demo.web.controller.base.BaseController;
 import project.demo.web.models.SaleCreateBindingModel;
 import project.demo.web.models.SearchCarBindingModel;
 
+import java.io.IOException;
 import java.util.List;
 
 @Controller
@@ -22,22 +25,34 @@ public class CarController extends BaseController {
 
     private CarService carService;
 
+    private CloudinaryService cloudinaryService;
+
     @Autowired
-    public CarController(ModelMapper modelMapper, CarService carService) {
+    public CarController(ModelMapper modelMapper, CarService carService, CloudinaryService cloudinaryService) {
         this.modelMapper = modelMapper;
         this.carService = carService;
+        this.cloudinaryService = cloudinaryService;
     }
 
     @GetMapping("/create")
     public ModelAndView createCar(){
 
-        return super.view("cars/create-car");
+        return super.view("submit");
     }
 
     @PostMapping("/create")
     public ModelAndView crateSale(@ModelAttribute SaleCreateBindingModel model){
 
-        this.carService.publish(this.modelMapper.map(model, CarServiceModel.class));
+
+        CarServiceModel carServiceModel = this.modelMapper.map(model,CarServiceModel.class);
+
+        try {
+            carServiceModel.setImageUrl(this.cloudinaryService.uploadImage(model.getImage()));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        this.carService.publish(carServiceModel);
 
         return redirect("/");
     }
@@ -45,7 +60,7 @@ public class CarController extends BaseController {
     @GetMapping("/search")
     public ModelAndView listAllConfirm(){
 
-        return super.view("cars/car-search");
+        return super.view("vehiculs");
     }
 
     @PostMapping("/search")
@@ -55,7 +70,7 @@ public class CarController extends BaseController {
 
         ModelAndView modelAndView = new ModelAndView();
 
-        modelAndView.setViewName("cars/car-search");
+        modelAndView.setViewName("vehiculs");
         modelAndView.addObject(allBy);
         return modelAndView;
     }

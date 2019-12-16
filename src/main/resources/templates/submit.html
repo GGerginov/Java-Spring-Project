@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <th:block th:include="~{fragments/head1}"/>
+</head>
+
+<body>
+    <!-- /.preloader -->
+    <div id="preloader"></div>
+
+    <div class="theme-layout">
+
+
+        <div class="account-popup-sec">
+             
+            <div class="account-popup-area">
+                <div class="account-popup">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="account-user">
+                                <div class="logo">
+                                    <a href="#" title="">
+                                        <i class="fa fa-get-pocket"></i>
+                                        <span>KwitaraCars</span>
+                                        <strong>SELL VEHICULS</strong>
+                                    </a>
+                                </div><!-- LOGO -->
+                                <form>
+                                    <h1>Login Form</h1>
+                                    <div class="field">
+                                        <input type="text" placeholder="Username" />
+                                    </div>
+                                    <div class="field">
+                                        <input type="password" placeholder="Password" />
+                                    </div>
+                                    <div class="field">
+                                        <input type="submit" value="SEND NOW" class="flat-btn" />
+                                    </div>
+                                </form>
+                                <i>OR</i>
+                                <span>LOGIN WITH</span>
+                                <ul class="social-btns">
+                                    <li><a href="#" title=""><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#" title=""><i class="fa fa-google-plus"></i></a></li>
+                                    <li><a href="#" title=""><i class="fa fa-twitter"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="registration-sec">
+                                <h1>SIGNUP Form</h1>
+                                <form>
+                                    <div class="field">
+                                        <input type="text" placeholder="Your Name" />
+                                    </div>
+                                    <div class="field">
+                                        <input type="text" placeholder="Your Email" />
+                                    </div>
+                                    <div class="field">
+                                        <input type="password" placeholder="Type Password" />
+                                    </div>
+                                    <div class="field">
+                                        <input type="password" placeholder="Retype Password" />
+                                    </div>                                   
+                                    <label>
+                                        <input type="checkbox" /> By Clicking on this You are agree with our <a href="#" title="">Terms & Condition</a>
+                                    </label>
+                                    <input type="submit" value="Singup Now" class="flat-btn" />
+                                </form>
+                            </div><!-- Registration sec -->
+                        </div>
+                    </div>
+                    <span class="close-popup"><i class="fa fa-close"></i></span>
+                </div>
+            </div>
+        </div><!-- Account Popup Sec -->
+
+
+        <header class="simple-header for-sticky ">
+            <th:block th:include="~{fragments/header}"/>
+        </header>
+
+        <div class="inner-head overlap">
+            <div style="background: url(/img/parallax1.jpg) repeat scroll 50% 422.28px transparent;" class="parallax scrolly-invisible no-parallax"></div><!- PARALLAX BACKGROUND IMAGE ->
+            <div class="container">
+                <div class="inner-content">
+                    <span><i class="ti ti-home"></i></span>
+                    <h2>SUBMIT vehicul </h2>
+                    <ul>
+                        <li><a href="#" title="">HOME</a></li>
+                        <li><a href="#" title="">SUBMIT VEHICUL</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <section class="block">
+            <div class="container agnet-prop">
+                <div class="row">                    
+                    <aside class="col-md-4 column">
+                        <div class="agent_bg_widget widget"> 
+                            <div class="agent_widget">
+                                <div class="agent_pic">
+                                    <a href="agent.html" title="">
+                                        <img th:src="@{/img/demo/man1.jpg}" alt="" />
+                                        <h5>Smith forbes</h5> 
+                                    </a>
+                                </div>   
+                                <div class="agent_social">
+                                    <a href="#" title=""><i class="fa fa-facebook"></i></a>
+                                    <a href="#" title=""><i class="fa fa-google-plus"></i></a>
+                                    <a href="#" title=""><i class="fa fa-twitter"></i></a>
+                                    <a href="#" title=""><i class="fa fa-tumblr"></i></a>
+                                </div>
+
+                                <span>
+                                    <i class="fa fa-phone"> </i> +1 9090909090 
+                                </span>
+                                <span>
+                                    <i class="fa fa-envelope"> </i> agent@company.com
+                                </span>
+                                <ul class="agent-menu">
+                                    <li>
+                                        <a href="" ><i class="fa fa-user"> </i> My Profile </a>
+                                    </li>
+                                    <li>
+                                        <a href="" ><i class="fa fa-home"> </i> My vehiculs </a>
+                                    </li>
+                                    <li>
+                                        <a href="" ><i class="fa fa-sign-out"> </i> Log-out </a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>                        
+
+                        <div class="package_widget widget">
+                            <div class="heading2">
+                                <h3>Your Current Package</h3>
+                            </div>
+                            <div class="package-content">
+                                <p><strong>Free Membership</strong></p>
+                                <p>Listing included:&nbsp;3</p>
+                                <p>Listing remain:&nbsp;1</p>
+                                <p>Featured included:&nbsp;1</p>
+                                <p>Featured remain:&nbsp;1</p>
+                                <p>Ends On:&nbsp;Never</p>
+                            </div>
+                        </div>
+
+                        <div class="pass_pro_widget widget">
+                            <div class="heading2">
+                                <h3>Change Your Plan</h3>
+                            </div>
+                            <div class="plan-content">
+                                <form class="subscription_post">
+                                    <div class="form-message">
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="dropdown label-select">
+                                            <select class="form-control">
+                                                <option>Basic Plan</option>
+                                                <option>Slave Plan</option>
+                                                <option>Gold Plan</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="recurring_payment" class="checkbox-label">
+                                            <input id="recurring_payment" name="recurring_payment" value="1" type="checkbox"> 
+                                            Make Payment Recurring
+                                        </label>
+                                    </div>                                          
+                                    <div class="">
+                                        <input class="btn btn-success" value="PAY WITH PAYPAL" type="submit">
+                                    </div>                                            
+                                    <div class="package-info">
+                                        or&nbsp;
+                                        <a href="#">View more detail</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </aside>
+
+                    <div class="col-md-8 column">
+                        <div class="heading4">
+                            <h2>SUBMIT VEHICUL</h2> 
+                        </div>
+
+                        <div class="submit-content">
+                            <form id="new_post" name="new_post" th:method="post" class="vehicul-form" role="form" th:action="@{/cars/create}" enctype="multipart/form-data">
+                                <div class="control-group">
+                                    <div class="group-title">Vehicul Description &amp; Price</div>
+                                    <div class="group-container row">
+                                        
+                                        <div class="col-md-8">
+                                            <div class="form-group s-prop-title">
+                                                <label for="title">Title&nbsp;&#42;</label>
+                                                <input type="text" id="title" class="form-control" value="" name="title" required="">
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-md-4">
+                                            <div class="form-group s-prop-area">
+                                                <label for="area">Price </label>
+                                                <input type="text" id="area" class="form-control" value="" name="price">
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-md-12">
+                                            <div class="form-group s-prop-desc">
+                                                <label for="textarea">Description&nbsp;&#42;</label>
+                                                <textarea id="textarea" name="desc" rows="10" required="" th:name="description" style="width: 100%;"></textarea>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            
+                                            <div class="col-md-4">
+                                                <div class="form-group s-prop-status">
+                                                    <label>Manufacturer</label>
+                                                    <div class="dropdown label-select">
+                                                        <div class="label-select">
+                                                            <select class="form-control" name="manufacturer">
+                                                                <option>Any </option>
+                                                                <option>Audi</option>
+                                                                <option>Mercedes-Benz</option>
+                                                                <option>BMW</option>
+                                                                <option>Lexus</option>
+                                                                <option>Lincoln</option>
+                                                                <option>Ford</option>
+                                                                <option>Fiat</option>
+                                                                <option>Dodge</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-4">
+                                                <div class="form-group s-prop-area">
+                                                    <label for="model">Model </label>
+                                                    <input type="text" id="model" class="form-control" value="" name="model">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-4">
+                                                <div class="form-group s-prop-status">
+                                                    <label>locations</label>
+                                                    <div class="dropdown label-select">
+                                                        <div class="label-select">
+                                                            <select class="form-control" name="location">
+                                                                <option>Any locations</option>
+                                                                <option>Central New York</option>
+                                                                <option>GreenVille</option>
+                                                                <option>Long Island</option>
+                                                                <option>New York City</option>
+                                                                <option>West Side</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-4">
+                                                <div class="form-group s-prop-type">
+                                                    <label>Status </label>
+                                                    <div class="dropdown label-select">
+                                                        <select class="form-control" name="status">
+                                                            <option>Any Status </option>
+                                                            <option value="DAMAGED">Damaged</option>
+                                                            <option value="NEW">New</option>
+                                                            <option value="USED">Used</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                             <div class="col-md-4">
+                                                <div class="form-group s-prop-type">
+                                                    <label>Fuel </label>
+                                                    <div class="dropdown label-select">
+                                                        <select class="form-control" name="fuel">
+                                                            <option>Any </option>
+                                                            <option value="DIESEL">Diesel</option>
+                                                            <option value="ELECTRIC">Electric</option>
+                                                            <option value="LPG">Gas (LPG, Natural Gas)</option>
+                                                            <option value="GASOLINE">Gasoline</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group vehicul_field_years">
+                                                    <label for="car_years">Car Years </label>
+                                                    <input type="text" id="car_years" name="year" class="form-control" value="">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group vehicul_field_Mileage">
+                                                    <label for="car_Mileage">Car Mileage </label>
+                                                    <input type="text" id="car_Mileage" name="millage" class="form-control" value="">
+                                                </div>
+                                            </div>
+
+                                           
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <div class="group-title">Vehicul Images</div>
+                                    <div class="group-container row">
+                                        <div class="col-md-12">
+                                            <div id="upload-container">
+                                                <div id="aaiu-upload-container">
+                                                    <div class="moxie-shim moxie-shim-html5">
+                                                        <label for="add-car-image" class="btn flat-btn btn-lg">Select Images</label>
+                                                        <input type="file" class="form-control-file" id="add-car-image" name="image"
+                                                               required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> 
+
+                                <div class="submit row" style="clear: both; margin-top: 25px;">
+                                    <div class="col-md-12">
+                                        <input type="submit" class="btn btn-lg flat-btn" id="vehicul_submit" value="Add vehicul">
+                                        <label style="margin-top: 15px; margin-left: 10px;">  Your submission will be reviewed by Administrator before it can be published</label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </section>
+
+        <footer>
+            <th:block th:include="~{fragments/footer1}"/>
+        </footer>
+
+    </div>
+
+    <!-- Script -->
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            "use strict";
+            $(".related-vehiculs-items").owlCarousel({
+                autoplay: true,
+                autoplayTimeout: 3000,
+                smartSpeed: 2000,
+                loop: true,
+                dots: true,
+                nav: false,
+                marging: 30,
+                items: 4,
+                responsiveClass: true,
+                responsive: {
+                    0: {
+                        items: 1,
+                        nav: false
+                    },
+                    600: {
+                        items: 2,
+                        nav: false
+                    },
+                    1000: {
+                        items: 3,
+                        nav: true,
+                        loop: false
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

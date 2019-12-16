@@ -13,7 +13,7 @@ public class HomeController extends BaseController {
     @GetMapping("/")
     public ModelAndView home(){
 
-        return super.view("home");
+        return super.view("index");
     }
 
     @GetMapping("/contacts")

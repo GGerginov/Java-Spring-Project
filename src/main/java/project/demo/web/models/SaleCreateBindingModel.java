@@ -1,5 +1,6 @@
 package project.demo.web.models;
 
+import org.springframework.web.multipart.MultipartFile;
 import project.demo.domain.entities.enums.Fuel;
 import project.demo.domain.entities.enums.Status;
 
@@ -23,11 +24,11 @@ public class SaleCreateBindingModel {
 
     private Status status;
 
-    private Byte[] image;
-
     private String location;
 
     private Integer millage;
+
+    private MultipartFile image;
 
     public SaleCreateBindingModel() {
     }
@@ -96,14 +97,6 @@ public class SaleCreateBindingModel {
         this.status = status;
     }
 
-    public Byte[] getImage() {
-        return image;
-    }
-
-    public void setImage(Byte[] image) {
-        this.image = image;
-    }
-
     public String getLocation() {
         return location;
     }
@@ -118,5 +111,13 @@ public class SaleCreateBindingModel {
 
     public void setMillage(Integer millage) {
         this.millage = millage;
+    }
+
+    public MultipartFile getImage() {
+        return image;
+    }
+
+    public void setImage(MultipartFile image) {
+        this.image = image;
     }
 }

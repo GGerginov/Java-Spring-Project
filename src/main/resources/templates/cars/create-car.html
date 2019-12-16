@@ -26,107 +26,106 @@
                     </div>
 
                     <div class="submit-content">
-                        <form id="new_post" name="new_post" method="post" class="vehicul-form" role="form">
-                            <div class="control-group">
-                                <div class="group-title">Публикуване на безплатна обява</div>
-                                <div class="group-container row">
+                        <form class="mx-auto w-25" th:method="post" th:action="@{/cars/create}"
+                              enctype="multipart/form-data">
 
-                                    <div class="col-md-8">
-                                        <div class="form-group s-prop-title">
-                                            <label for="title">Заглавие&nbsp;&#42;</label>
-                                            <input type="text" id="title" class="form-control" value="" name="title"
-                                                   required="">
-                                        </div>
-                                    </div>
+                            <div class="group-title">Публикуване на безплатна обява</div>
+                            <div class="group-container row">
 
-                                    <div class="col-md-4">
-                                        <div class="form-group s-prop-area">
-                                            <label for="area">Цена </label>
-                                            <input type="text" id="area" class="form-control" value="" name="price" required="">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-12">
-                                        <div class="form-group s-prop-desc">
-                                            <label for="textarea">Описение&nbsp;&#42;</label>
-                                            <textarea id="textarea" name="description" rows="10" required=""
-                                                      style="width: 100%;"></textarea>
-                                        </div>
-                                    </div>
-
-                                    <div>
-
-                                        <div class="col-md-4">
-                                            <div class="form-group vehicul_field_Mileage">
-                                                <label for="manufacturer">Марка</label>
-                                                <input type="text" id="manufacturer" name="manufacturer"
-                                                       class="form-control" value="" required="">
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-4">
-                                            <div class="form-group vehicul_field_Mileage">
-                                                <label for="location">Населено място</label>
-                                                <input type="text" id="location" name="location"
-                                                       class="form-control" value="">
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-4">
-                                            <div class="form-group vehicul_field_Mileage">
-                                                <label for="model">Модел </label>
-                                                <input type="text" id="model" name="model"
-                                                       class="form-control" value="" required="">
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-4">
-                                            <div class="form-group s-prop-type">
-                                                <label>Състояние </label>
-                                                <div class="dropdown label-select">
-                                                    <select class="form-control" name="status">
-                                                        <option></option>
-                                                        <option value="NEW">Нов</option>
-                                                        <option value="USED">Употребяван</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group s-prop-type">
-                                                <label>Гориво </label>
-                                                <div class="dropdown label-select">
-                                                    <select class="form-control" name="fuel" required="">
-                                                        <option></option>
-                                                        <option value="DIESEL">Дизел</option>
-                                                        <option value="LPG">LPG</option>
-                                                        <option value="GASOLINE">Бензин</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group vehicul_field_years">
-                                                <label for="car_years">Година </label>
-                                                <input type="text" id="car_years" name="year"
-                                                       class="form-control" value="" required="">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group vehicul_field_Mileage">
-                                                <label for="car_years">Пробег</label>
-                                                <input type="text" id="car_Mileage" name="mileage"
-                                                       class="form-control" value="">
-                                            </div>
-                                        </div>
-
-
-
+                                <div class="col-md-8">
+                                    <div class="form-group s-prop-title">
+                                        <label for="title">Заглавие&nbsp;&#42;</label>
+                                        <input type="text" id="title" class="form-control" value="" name="title"
+                                               required="">
                                     </div>
                                 </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group s-prop-area">
+                                        <label for="area">Цена </label>
+                                        <input type="text" id="area" class="form-control" value="" name="price"
+                                               required="">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div class="form-group s-prop-desc">
+                                        <label for="textarea">Описение&nbsp;&#42;</label>
+                                        <textarea id="textarea" name="description" rows="10" required=""
+                                                  style="width: 100%;"></textarea>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-md-4">
+                                    <div class="form-group vehicul_field_Mileage">
+                                        <label for="manufacturer">Марка</label>
+                                        <input type="text" id="manufacturer" name="manufacturer"
+                                               class="form-control" value="" required="">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group vehicul_field_Mileage">
+                                        <label for="location">Населено място</label>
+                                        <input type="text" id="location" name="location"
+                                               class="form-control" value="">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group vehicul_field_Mileage">
+                                        <label for="model">Модел </label>
+                                        <input type="text" id="model" name="model"
+                                               class="form-control" value="" required="">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group s-prop-type">
+                                        <label>Състояние </label>
+                                        <div class="dropdown label-select">
+                                            <select class="form-control" name="status">
+                                                <option></option>
+                                                <option value="NEW">Нов</option>
+                                                <option value="USED">Употребяван</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group s-prop-type">
+                                        <label>Гориво </label>
+                                        <div class="dropdown label-select">
+                                            <select class="form-control" name="fuel" required="">
+                                                <option></option>
+                                                <option value="DIESEL">Дизел</option>
+                                                <option value="LPG">LPG</option>
+                                                <option value="GASOLINE">Бензин</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group vehicul_field_years">
+                                        <label for="car_years">Година </label>
+                                        <input type="text" id="car_years" name="year"
+                                               class="form-control" value="" required="">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group vehicul_field_Mileage">
+                                        <label for="car_years">Пробег</label>
+                                        <input type="text" id="car_Mileage" name="mileage"
+                                               class="form-control" value="">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="add-car-image" class="font-weight-bold">Image</label>
+                                    <input type="file" class="form-control-file" id="add-car-image" name="image"
+                                           required>
+                                </div>
                             </div>
-
-
                             <div class="submit row" style="clear: both; margin-top: 25px;">
                                 <div class="col-md-12">
                                     <input type="submit" class="btn btn-lg flat-btn" id="vehicul_submit"
@@ -134,6 +133,7 @@
                                     <label style="margin-top: 15px; margin-left: 10px;"></label>
                                 </div>
                             </div>
+
                         </form>
                     </div>
                 </div>

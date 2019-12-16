@@ -46,7 +46,7 @@
                                                 <ul id="image-gallery" class="gallery list-unstyled cS-hidden">
                                                     <li data-thumb="img/one-car/1.jpg">
                                                         <img class="roundedimage"
-                                                             th:src="@{${'/img/cars/' + carServiceModel.getManufacturer().toLowerCase() + '.png'}}"
+                                                             th:src="${carServiceModel.getImageUrl()}"
                                                              width="350"
                                                              height="350"
                                                              alt="KwitaraCars"/>

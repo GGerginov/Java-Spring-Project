@@ -1,5 +1,7 @@
 package project.demo.web.models.users;
 
+import org.springframework.web.multipart.MultipartFile;
+
 public class UserRegisterBindingModel {
 
     private String username;
@@ -9,6 +11,8 @@ public class UserRegisterBindingModel {
     private String password;
 
     private String confirmPassword;
+
+    private MultipartFile image;
 
     public UserRegisterBindingModel() {
     }
@@ -43,5 +47,13 @@ public class UserRegisterBindingModel {
 
     public void setConfirmPassword(String confirmPassword) {
         this.confirmPassword = confirmPassword;
+    }
+
+    public MultipartFile getImage() {
+        return image;
+    }
+
+    public void setImage(MultipartFile image) {
+        this.image = image;
     }
 }

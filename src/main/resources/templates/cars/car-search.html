@@ -149,7 +149,7 @@
                         <div class="card-image fa-border">
                             <span class="card-notify-year" th:text="${car.getYear()}"></span>
                             <img class="img-fluid border "
-                                 th:src="@{${'/img/cars/' + car.getManufacturer().trim().toLowerCase() + '.png'}}"
+                                 th:src="${car.getImageUrl()}"
                                  width="350"
                                  height="350"
                                  alt="Alternate Text"/>

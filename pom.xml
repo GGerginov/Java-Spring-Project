@@ -76,15 +76,13 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/com.cloudinary/cloudinary -->
         <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-test</artifactId>
-            <scope>test</scope>
+            <groupId>com.cloudinary</groupId>
+            <artifactId>cloudinary</artifactId>
+            <version>1.0.14</version>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security</artifactId>
-        </dependency>
+
 
     </dependencies>
     <build>

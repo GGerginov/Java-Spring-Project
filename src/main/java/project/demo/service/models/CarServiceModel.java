@@ -31,6 +31,8 @@ public class CarServiceModel {
 
     private Integer millage;
 
+    private String imageUrl;
+
     public CarServiceModel() {
     }
 
@@ -128,5 +130,13 @@ public class CarServiceModel {
 
     public void setMillage(Integer millage) {
         this.millage = millage;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 }

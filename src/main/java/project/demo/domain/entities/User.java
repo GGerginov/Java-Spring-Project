@@ -16,6 +16,8 @@ public class User extends BaseEntity{
 
     private String email;
 
+    private String profilePictureUrl;
+
     public User() {
     }
 
@@ -46,4 +48,12 @@ public class User extends BaseEntity{
         this.email = email;
     }
 
+    @Column(nullable = false)
+    public String getProfilePictureUrl() {
+        return profilePictureUrl;
+    }
+
+    public void setProfilePictureUrl(String profilePictureUrl) {
+        this.profilePictureUrl = profilePictureUrl;
+    }
 }

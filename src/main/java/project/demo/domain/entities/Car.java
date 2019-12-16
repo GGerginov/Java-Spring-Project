@@ -27,16 +27,16 @@ public class Car extends BaseEntity{
 
     private Status status;
 
-    private Byte[] image;
-
     private String location;
 
     private Integer millage;
 
+    private String imageUrl;
+
     public Car() {
     }
 
-    @Column(name = "brand",nullable = false)
+    @Column(name = "brand")
     public String getManufacturer() {
         return manufacturer;
     }
@@ -45,7 +45,7 @@ public class Car extends BaseEntity{
         this.manufacturer = brand;
     }
 
-    @Column(name = "model",nullable = false)
+    @Column(name = "model")
     public String getModel() {
         return model;
     }
@@ -54,7 +54,7 @@ public class Car extends BaseEntity{
         this.model = model;
     }
 
-    @Column(name = "price",nullable = false)
+    @Column(name = "price")
     public BigDecimal getPrice() {
         return price;
     }
@@ -64,7 +64,7 @@ public class Car extends BaseEntity{
     }
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "fuel",nullable = false)
+    @Column(name = "fuel")
     public Fuel getFuel() {
         return fuel;
     }
@@ -73,7 +73,7 @@ public class Car extends BaseEntity{
         this.fuel = fuel;
     }
 
-    @Column(name = "year",nullable = false)
+    @Column(name = "year")
     public Integer getYear() {
         return year;
     }
@@ -109,16 +109,6 @@ public class Car extends BaseEntity{
         this.description = description;
     }
 
-    @Lob
-    @Column(name = "image")
-    public Byte[] getImage() {
-        return image;
-    }
-
-    public void setImage(Byte[] image) {
-        this.image = image;
-    }
-
     @Column(name = "location")
     public String getLocation() {
         return location;
@@ -135,5 +125,14 @@ public class Car extends BaseEntity{
 
     public void setMillage(Integer millage) {
         this.millage = millage;
+    }
+
+    @Column(name = "image_URL")
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 }
